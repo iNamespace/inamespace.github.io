@@ -6,9 +6,23 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-color: whitesmoke;
             font-family: Consolas,'Andale Mono','Lucida Console','DejaVu Sans Mono',monospace;
+            color: #555555;
+        }
+        
+        .i {
+            background-color: #000;
             color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            box-shadow: 0 0 6px 1px rgba(50, 50, 50, 0.10);
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
         .header {
@@ -44,7 +58,7 @@
 <body>
     <div class="header">
         <h1>
-            {i}
+            <span class='i'>{i}</span>
         </h1>
         <h1>
             iNamespace
