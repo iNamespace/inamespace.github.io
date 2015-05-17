@@ -63,6 +63,27 @@
                 color: #000;
                 text-decoration: none;
             }
+        .typed-cursor{
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
     </style>
 </head>
 
@@ -74,7 +95,7 @@
         <h1>
             iNamespace
         </h1>
-        <h3>
+        <h3 id='what-is-inamespace'>
             .NET libraries
         </h3>
     </div>
@@ -88,6 +109,12 @@
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', 'UA-62650815-1', 'auto');
         ga('send', 'pageview');
+        $(function(){
+            $("#what-is-inamespace").typed({
+                strings: [".NET libraries", "Mobile Applications", "Web Applications"],
+                loop: true
+            });
+        });
     </script>
 </body>
 </html>
